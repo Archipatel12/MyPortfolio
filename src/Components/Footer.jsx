@@ -1,14 +1,4 @@
-/**
- * Footer component
- *
- * Displays avenues to contact you.
- * Contact information is passed in from the App component that
- * renders the Footer.
- *
- * If a social value has an empty string it will not be displayed.
- */
 import React from "react";
-import PropTypes from "prop-types";
 
 import devDotToIcon from "../images/socials/devdotto.svg";
 import envelopeIcon from "../images/socials/envelope.svg";
@@ -26,19 +16,19 @@ import youTubeIcon from "../images/socials/youtube.svg";
  *  Opening links in new tabs: https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
  */
 
-const Footer = (props) => {
-  const {
-    devDotTo,
-    email,
-    gitHub,
-    instagram,
-    linkedIn,
-    medium,
-    name,
-    primaryColor,
-    twitter,
-    youTube,
-  } = props;
+const Footer = () => {
+  const contactInfo = {
+    devDotTo: "yourDevDotToUsername",
+    email: "archipatel9954@gamil.com",
+    gitHub: "Archipatel12",
+    instagram: "__.archi.__12",
+    linkedIn: "archipatel12",
+    medium: "yourMediumUsername",
+    name: "Archi Patel",
+    primaryColor: "#333",
+    twitter: "yourTwitterUsername",
+    youTube: "yourYouTubeUsername",
+  };
 
   return (
     <div
@@ -49,8 +39,8 @@ const Footer = (props) => {
         alignItems: "center",
         gap: "2.5rem",
         padding: "5rem 0 3rem",
-        backgroundColor: primaryColor,
-        width: "100vw"
+        backgroundColor: contactInfo.primaryColor,
+        width: "100vw",
       }}
     >
       <div
@@ -60,52 +50,52 @@ const Footer = (props) => {
           gap: "2.5rem",
         }}
       >
-        {email && (
-          <a href={`mailto:${email}`}>
+        {contactInfo.email && (
+          <a href={`mailto:${contactInfo.email}`}>
             <img src={envelopeIcon} alt="email" className="socialIcon" />
           </a>
         )}
-        {devDotTo && (
-          <a href={`https://dev.to/${devDotTo}`} target="_blank" rel="noopener noreferrer">
+        {contactInfo.devDotTo && (
+          <a href={`https://dev.to/${contactInfo.devDotTo}`} target="_blank" rel="noopener noreferrer">
             <img src={devDotToIcon} alt="Dev.to" className="socialIcon" />
           </a>
         )}
-        {gitHub && (
-          <a href={`https://github.com/${gitHub}`} target="_blank" rel="noopener noreferrer">
+        {contactInfo.gitHub && (
+          <a href={`https://github.com/${contactInfo.gitHub}`} target="_blank" rel="noopener noreferrer">
             <img src={gitHubIcon} alt="GitHub" className="socialIcon" />
           </a>
         )}
-        {instagram && (
+        {contactInfo.instagram && (
           <a
-            href={`https://www.instagram.com/${instagram}`}
+            href={`https://www.instagram.com/${contactInfo.instagram}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={instagramIcon} alt="Instagram" className="socialIcon" />
           </a>
         )}
-        {linkedIn && (
+        {contactInfo.linkedIn && (
           <a
-            href={`https://www.linkedin.com/in/${linkedIn}`}
+            href={`https://www.linkedin.com/in/${contactInfo.linkedIn}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={linkedInIcon} alt="LinkedIn" className="socialIcon" />
           </a>
         )}
-        {medium && (
-          <a href={`https://medium.com/@${medium}`} target="_blank" rel="noopener noreferrer">
+        {contactInfo.medium && (
+          <a href={`https://medium.com/@${contactInfo.medium}`} target="_blank" rel="noopener noreferrer">
             <img src={mediumIcon} alt="Medium" className="socialIcon" />
           </a>
         )}
-        {twitter && (
-          <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
+        {contactInfo.twitter && (
+          <a href={`https://twitter.com/${contactInfo.twitter}`} target="_blank" rel="noopener noreferrer">
             <img src={twitterIcon} alt="Twitter" className="socialIcon" />
           </a>
         )}
-        {youTube && (
+        {contactInfo.youTube && (
           <a
-            href={`https://www.youtube.com/c/${youTube}`}
+            href={`https://www.youtube.com/c/${contactInfo.youTube}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -114,28 +104,10 @@ const Footer = (props) => {
         )}
       </div>
       <p className="small" style={{ marginTop: 0, color: "white" }}>
-        Created by {name}
+        Created by {contactInfo.name}
       </p>
     </div>
   );
-};
-
-Footer.defaultProps = {
-  name: "",
-};
-
-Footer.propTypes = {
-  devDotTo: PropTypes.string,
-  email: PropTypes.string,
-  gitHub: PropTypes.string,
-  instagram: PropTypes.string,
-  linkedIn: PropTypes.string,
-  medium: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  primaryColor: PropTypes.string,
-  twitter: PropTypes.string,
-  youTube: PropTypes.string,
-
 };
 
 export default Footer;

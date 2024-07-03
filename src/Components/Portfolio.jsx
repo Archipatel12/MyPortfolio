@@ -19,7 +19,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
+import image from "../images/me1.jpg";
 
 const imageAltText = "desktop with books and laptop";
 
@@ -31,28 +31,28 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "E-Comnece Website",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "An e-commerce website built with React, Node.js, and MongoDB, specializing in clothing for kids, men, and women.",
+    url: "https://github.com/Archipatel12/Ecommerce",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Blog Website",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "A blog website built with Next.js, featuring a home page with a list of blogs and 'Read More' links to view the full content of each post.",
+    url: "https://github.com/Archipatel12/Blog",
   },
   {
-    title: "My Resume Site",
+    title: "MAKEYOURTRIP",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "A travel website built with MySQL and PHP, featuring API integration for hotel and flight search, and a database for packages and user authentication.",
+    url: "https://github.com/Archipatel12/MAKEYOURTRIP",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "Event Registration Form",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "An event registration form built with React, utilizing useState and useEffect hooks.",
+    url: "https://github.com/Archipatel12/Event-Registration-From",
   },
 ];
 
@@ -64,7 +64,7 @@ const Portfolio = () => {
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
           <img
             src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover" }}
+            style={{ height: "100%", width: "100%", objectFit: "cover" }}
             alt={imageAltText}
           />
         </div>
